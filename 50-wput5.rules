@@ -1,1 +1,2 @@
+SUBSYSTEM=="net", ACTION=="remove", ATTR{address}=="34:c8:d6:b*"
 SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="34:c8:d6:b*", NAME="eth0"
