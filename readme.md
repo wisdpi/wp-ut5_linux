@@ -18,40 +18,39 @@ WP-UT5 use Realtek RTL8157 IC.
 - WP-UT5
 
 ## Quick install
-0. Prepare env
+0. Prepare
 
-`sudo apt update -y && sudo apt install git gcc make -y`
+  `sudo apt update -y && sudo apt install git gcc make -y`
 
 1. Clone the code
 
-`git clone https://github.com/wisdpi/wp-ut5_linux.git`
+  `git clone https://github.com/wisdpi/wp-ut5_linux.git`
 
 2. Change to the directory
 
-`cd wp-ut5_linux/`
+  `cd wp-ut5_linux/`
 
 3. Build
 
-```
-sudo depmod -a
-sudo make all
-```
+  ```
+  sudo depmod -a
+  sudo make all
+  ```
 
 4. Config system
 
-```
-sudo update-initramfs -u
-sudo cp 50-wput5.rules /etc/udev/rules.d/
-
-```
+  ```
+  sudo update-initramfs -u
+  sudo cp 50-wput5.rules /etc/udev/rules.d/
+  ```
 
 5. Reboot:
 
-`sudo reboot`
+  `sudo reboot`
 
 6. You can check whether the driver is loaded by using following commands.
-
-```
-lsmod | grep r8152
-ifconfig -a
-```
+  
+  ```
+  lsmod | grep r8152
+  ifconfig -a
+  ```
