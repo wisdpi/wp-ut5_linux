@@ -54,3 +54,5 @@ WP-UT5 use Realtek RTL8157 IC.
   lsmod | grep r8152
   ifconfig -a
   ```
+
+![image](image/2.png)
