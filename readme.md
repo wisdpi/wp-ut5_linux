@@ -30,15 +30,24 @@ WP-UT5 use Realtek RTL8157 IC.
 
 `cd wp-ut5_linux/`
 
-3. If you are running the target kernel, then you should be able to do :
+3. Build
 
-`sudo sh ./autorun.sh`
+`sudo make all`
 
-4. Reboot:
+4. Config system
+
+```
+sudo depmod -a
+sudo update-initramfs -u
+sudo cp 50-wput5.rules /etc/udev/rules.d/
+
+```
+
+5. Reboot:
 
 `sudo reboot`
 
-5. You can check whether the driver is loaded by using following commands.
+6. You can check whether the driver is loaded by using following commands.
 
 ```
 lsmod | grep r8152
