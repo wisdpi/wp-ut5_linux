@@ -32,12 +32,14 @@ WP-UT5 use Realtek RTL8157 IC.
 
 3. Build
 
-`sudo make all`
+```
+sudo depmod -a
+sudo make all
+```
 
 4. Config system
 
 ```
-sudo depmod -a
 sudo update-initramfs -u
 sudo cp 50-wput5.rules /etc/udev/rules.d/
 
