@@ -25483,6 +25483,12 @@ static int rtl8152_probe(struct usb_interface *intf,
 	case RTL_VER_15:
 		netdev->max_mtu = size_to_mtu(16 * 1024);
 		break;
+	case RTL_VER_16:
+		netdev->max_mtu = size_to_mtu(16 * 1024);
+		break;
+	case RTL_VER_17:
+		netdev->max_mtu = size_to_mtu(16 * 1024);
+		break;
 	case RTL_VER_01:
 	case RTL_VER_02:
 	case RTL_VER_07:
