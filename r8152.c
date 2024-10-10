@@ -24137,6 +24137,12 @@ static int rtl8152_change_mtu(struct net_device *dev, int new_mtu)
 	case RTL_VER_15:
 		max_mtu = size_to_mtu(16 * 1024);
 		break;
+	case RTL_VER_16:
+		max_mtu = size_to_mtu(16 * 1024);
+		break;
+	case RTL_VER_17:
+		max_mtu = size_to_mtu(16 * 1024);
+		break;
 	case RTL_VER_01:
 	case RTL_VER_02:
 	case RTL_VER_07:
